@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: devstudy-db
+    environment:
+      POSTGRES_USER: devstudy
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: devstudy_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - devstudy-network
+
+  server:
+    build: ./server
+    container_name: devstudy-server
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://devstudy:password@postgres:5432/devstudy_db
+      - NODE_ENV=development
+    depends_on:
+      - postgres
+    networks:
+      - devstudy-network
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+
+  client:
+    build: ./client
+    container_name: devstudy-client
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:3000/api
+    depends_on:
+      - server
+    networks:
+      - devstudy-network
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+
+networks:
+  devstudy-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
