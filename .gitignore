@@ -1,35 +1,47 @@
 # Node.js
 node_modules/
+.pnp
+.pnp.js
 npm-debug.log
 yarn-error.log
 
 # Environment variables
 .env
 .env.local
-.env.production
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Build outputs
 dist/
 build/
+*.local
 *.tsbuildinfo
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Logs
-logs/
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Testing
 coverage/
 .nyc_output/
 
 # Docker
-docker-data/
+docker-compose.override.yml
+
+# Vercel
+.vercel

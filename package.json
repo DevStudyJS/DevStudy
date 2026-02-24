@@ -1,18 +1,17 @@
 {
   "name": "devstudy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "**DevStudy** es una plataforma web enfocada en el ámbito educativo basada en principios de **gamificación**, diseñada para apoyar a los alumnos en su trancisión de educación básica a nivel medio superior en méxico, mediante herramientas digitales interactivas.",
   "scripts": {
-    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:client": "cd client && npm run dev",
-    "dev:server": "cd server && npm run dev",
-    "build": "cd client && npm run build && cd ../server && npm run build",
-    "test": "cd client && npm test && cd ../server && npm test",
-    "lint": "cd client && npm run lint && cd ../server && npm run lint",
-    "docker:build": "docker-compose build",
-    "docker:up": "docker-compose up -d",
-    "docker:down": "docker-compose down"
+    "dev": "cd client && npm run dev",
+    "build": "cd client && npm install && npm run build",
+    "preview": "cd client && npm run preview",
+    "server:dev": "cd server && npm run dev",
+    "server:build": "cd server && npm install && npm run build",
+    "docker:up": "docker-compose -f docker/docker-compose.yml up -d",
+    "docker:down": "docker-compose -f docker/docker-compose.yml down",
+    "test": "cd client && npm run test",
+    "lint": "cd client && npm run lint"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
@@ -20,13 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevStudyJS/DevStudy.git"
+    "url": "https://github.com/DevStudyJS/DevStudy.git"
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"
   },
-  "author": "DevStudy 2026",
+  "keywords": ["educación", "gamificación", "UNAM", "matemáticas"],
+  "author": "DevStudy Team - Matemáticas Aplicadas y Computación",
   "license": "MIT",
   "homepage": "https://github.com/DevStudyJS/DevStudy#readme"
 }
