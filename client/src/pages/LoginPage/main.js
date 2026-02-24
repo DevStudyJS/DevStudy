@@ -18,13 +18,13 @@ const game = new Phaser.Game(config);
 
 function preload() {
     // Fondos e islas
-    this.load.image('mar', 'assets/mar.png');
-    this.load.image('islaCentral', 'assets/islaCentral.png');
-    this.load.image('islaRuinas', 'assets/islaRuinas.png');
-    this.load.image('islaFaro', 'assets/islaFaro.png');
-    this.load.image('islaCueva', 'assets/islaCueva.png');
-    this.load.image('islaPalmera', 'assets/islaPalmera.png');
-    this.load.image('btnJugar', 'assets/btnJugar.png');
+    this.load.image('mar', '../../assets/images/mar.png');
+    this.load.image('islaCentral', '../../assets/images/islaCentral.png');
+    this.load.image('islaRuinas', '../../assets/images/islaRuinas.png');
+    this.load.image('islaFaro', '../../assets/images/islaFaro.png');
+    this.load.image('islaCueva', '../../assets/images/islaCueva.png');
+    this.load.image('islaPalmera', '../../assets/images/islaPalmera.png');
+    this.load.image('btnJugar', '../../assets/images/btnJugar.png');
 }
 
 function create() {

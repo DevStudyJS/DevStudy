@@ -15,7 +15,8 @@
     "docker:down": "docker-compose down"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "depcheck": "^1.4.7"
   },
   "repository": {
     "type": "git",
