@@ -30,10 +30,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "VITE_API_URL": "@vite_api_url",
-    "VITE_APP_NAME": "DevStudy",
-    "VITE_VERSION": "2.0"
-  }
+  ]
 }
