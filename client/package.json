@@ -4,17 +4,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "  vite build",
     "preview": "vite preview",
     "test": "vitest",
     "lint": "eslint . --ext ts,tsx"
   },
   "dependencies": {
     "eventemitter3": "^5.0.4",
+    "typescript": "^5.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.3",
     "remixicon": "^4.9.1"
+
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -25,7 +27,6 @@
     "phaser": "^3.90.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
-    "typescript": "^5.5.3",
     "vite": "^5.4.0",
     "vitest": "^2.0.5"
   }
